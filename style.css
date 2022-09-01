@@ -41,6 +41,7 @@ nav li:last-child {
 nav hr {
   border: 2px solid red;
 }
+
 /* main */
 main .main-left > img {
   position: absolute;
@@ -86,7 +87,7 @@ main .main-left > img {
 }
 .main-right-right-container ul {
   position: absolute;
-  left: 300px;
+  left: 0px;
 }
 .main-right-right-container ul li {
   margin-top: 25px;
@@ -141,4 +142,62 @@ footer {
 }
 .footer-right img {
   height: 180px;
+}
+.menu-container{
+  display: none;
+}
+
+/* media queries */
+@media only screen and (max-width:720px){
+  nav ul{
+    display: none;
+  }
+  .menu-container{
+    display: block;
+    
+  }
+  main .main-left > img {
+    position: static;
+  }
+  .main-right{
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  footer{
+    flex-direction: column;
+    margin-left: 0px;
+  }
+  .footer-left{
+    margin-top: 60px;
+    margin-left: 60%;
+    
+  }
+  .main-right-right-container{
+    position: static;
+    flex-direction: column;
+    margin-right: 0px;
+  }
+  .main-right-right-container p{
+    position: static;
+    margin-left: 300px;
+  }
+  .main-right-right-container ul{
+    position: static;
+    left: 0px;
+    margin-top: 20px;
+    display: flex;
+    align-self: center;
+  }
+  .main-right-right-container ul li{
+    margin-left: 20px;
+  }
+  .footer-mid {
+    margin-left: 0px;
+    width: 100vw;
+    text-align: center;
+  }
+  .footer-right{
+    margin-left: 350px;
+    margin-top: 20px;
+  }
 }
